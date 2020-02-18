@@ -29,26 +29,57 @@ namespace PZA
 
         }
 
-        private void Con_Click(object sender, RoutedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            using (IDbConnection conection = new SqlConnection())
-            {
-                
-            }
+
+        }
+
+        private void Obnova_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+        using (IDbConnection conection = new SqlConnection())
+        {
+
+        }
             using (TestDbContext db = new TestDbContext())
             {
                 //    var customers = db.Customers;
                 //    foreach (Customer pl in customers)
                 //    {
                 //        Label22.Content = pl.CustomerName; }
-                var customers = db.Customers.Where(p => p.CustomerId == 3);
-                customers.FirstOrDefault().CustomerName = "Нузо";
-
-                db.SaveChanges();
+                var products = db.Product;
+                foreach (Product pl in products)
+                {
+                    this.ComboBox22.Items.Add(pl.ProductName);
+                   //ComboBox22.
+                }
 
 
             }
+
         }
+
+        //private void Con_Click(object sender, RoutedEventArgs e)
+        //{
+        //    using (IDbConnection conection = new SqlConnection())
+        //    {
+
+        //    }
+        //    using (TestDbContext db = new TestDbContext())
+        //    {
+        //        //    var customers = db.Customers;
+        //        //    foreach (Customer pl in customers)
+        //        //    {
+        //        //        Label22.Content = pl.CustomerName; }
+        //        var customers = db.Customers.Where(p => p.CustomerId == 3);
+        //        customers.FirstOrDefault().CustomerName = "Нузо";
+
+        //        db.SaveChanges();
+
+
+        //    }
+    }
 
     }
         //public static List<Customer> GetCustomersEf()
@@ -68,5 +99,5 @@ namespace PZA
         //    List<Customer> customers = query.ToList();
         //    return customers;
         //}
-}
+
 

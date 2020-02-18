@@ -7,9 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label x:Name="Label22" Content="Label" HorizontalAlignment="Left" Margin="65,39,0,0" VerticalAlignment="Top" Height="181" Width="320"/>
-        <Button x:Name="Con" Content="Button" HorizontalAlignment="Left" Margin="195,225,0,0" VerticalAlignment="Top" Width="75" Click="Con_Click"/>
-        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="100" Margin="390,185,0,0" VerticalAlignment="Top" Width="100"/>
-
+        <ComboBox x:Name="ComboBox22" HorizontalAlignment="Left" Margin="95,143,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Button x:Name="Obnova" Content="Button" HorizontalAlignment="Left" Margin="400,215,0,0" VerticalAlignment="Top" Width="75" Click="Obnova_Click"/>
     </Grid>
 </Window>
