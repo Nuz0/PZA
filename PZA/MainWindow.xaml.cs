@@ -45,6 +45,8 @@ namespace PZA
                 customers.FirstOrDefault().CustomerName = "Нузо";
 
                 db.SaveChanges();
+
+
             }
         }
 
